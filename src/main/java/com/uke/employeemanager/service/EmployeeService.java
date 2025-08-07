@@ -5,6 +5,7 @@ import com.uke.employeemanager.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -24,4 +25,15 @@ public class EmployeeService {
         return employeeRepository.save(employee);
 
     }
+
+    // Method to display all employees
+    public List<Employee> findAllEmployees(){
+        return employeeRepository.findAll();
+    }
+    // Method to update an employee
+    public Employee updateEmployee(Employee employee){
+        return employeeRepository.save(employee);
+    }
+
+
 }
