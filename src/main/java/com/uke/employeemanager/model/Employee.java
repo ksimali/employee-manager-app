@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class employee implements Serializable {
+public class Employee implements Serializable {
     // attributes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,11 +20,11 @@ public class employee implements Serializable {
     private String employeeCode;
 
     // default constructors
-    public employee() {
+    public Employee() {
     }
 
     // constructors with parameters
-    public employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
+    public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
