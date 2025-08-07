@@ -1,5 +1,6 @@
 package com.uke.employeemanager.service;
 
+import com.uke.employeemanager.exception.UserNotFoundException;
 import com.uke.employeemanager.model.Employee;
 import com.uke.employeemanager.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,8 @@ public class EmployeeService {
     }
     // Method findEmployeeById()
     public Employee findEmployeeById(Long id){
-        return employeeRepository.findEmployeeById(id);
+        return employeeRepository.findEmployeeById(id)
+                .orElseThrow(() -> new UserNotFoundException("Utilisateur ayant id: " + id + " n'a pas été trouvé"));
     }
 
     // Method deletEmployee() to delete an employee by id
