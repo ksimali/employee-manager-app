@@ -34,6 +34,11 @@ public class EmployeeService {
     public Employee updateEmployee(Employee employee){
         return employeeRepository.save(employee);
     }
+    // Method findEmployeeById()
+    public Employee findEmployeeById(Long id){
+        return employeeRepository.findEmployeeById(id);
+    }
+
     // Method deletEmployee() to delete an employee by id
     public void deleteEmployee(Long id){
         employeeRepository.deleteEmployeeById(id);
