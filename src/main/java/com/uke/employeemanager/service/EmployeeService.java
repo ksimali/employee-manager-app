@@ -26,11 +26,11 @@ public class EmployeeService {
 
     }
 
-    // Method to display all employees
+    // Method findAllEmployees() to display all employees
     public List<Employee> findAllEmployees(){
         return employeeRepository.findAll();
     }
-    // Method to update an employee
+    // Method updateEmployee() to update an employee
     public Employee updateEmployee(Employee employee){
         return employeeRepository.save(employee);
     }
