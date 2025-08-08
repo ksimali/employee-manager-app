@@ -38,7 +38,7 @@ public class EmployeeService {
     // Method findEmployeeById()
     public Employee findEmployeeById(Long id){
         return employeeRepository.findEmployeeById(id)
-                .orElseThrow(() -> new UserNotFoundException("Utilisateur ayant id: " + id + " n'a pas été trouvé"));
+                .orElseThrow(() -> new UserNotFoundException("Utilisateur ayant comme id: " + id + " n'a pas été trouvé"));
     }
 
     // Method deletEmployee() to delete an employee by id
