@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     // Custom delete method - Spring Data JPA will implement it based on method name
-    void deleteEmployeeById(Long id);
+    //void deleteEmployeeById(Long id);
 
     // Custom find method returning an Optional<Employee>
     Optional<Employee> findEmployeeById(Long id);
